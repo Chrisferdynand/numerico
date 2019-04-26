@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Subir Tarea</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="register">
+   
+   <div class="description-2">
+       <h2>1er Proyecto <br> Fis-243</h2>
+       <p class="formulario">Fecha límite 20/04/19 horas 8:00 am</p>
+    </div>
+    <form action="" id="form_subir">
+            <div class="form-1-2">
+                <label for="">Cargue su proyecto en C aquí:</label>
+                <input type="file" name="archivo" required>
+            </div>
+            <div class="barra">
+                <div class="barra_azul" id="barra_estado">
+                    <span></span>
+                </div>
+            </div><br>
+            <br>
+            <br>
+            <div class="contenedor-inputs">
+            <input type="text" name="nombre" placeholder="Nombre" class="input-48" required>
+                <input type="text" name="apellidos" placeholder="Apellidos" class="input-48" required>
+                <input type="text" name="correo" placeholder="Número de Líneas del archivo" class="input-100" required></div>
+            <div class="acciones">
+                <input type="submit" class="btn" value="Enviar">
+                <input type="button" class="cancel" id="cancelar" value="Cancelar">
+            </div>
+        </form>
+    
+    <script src="main.js"></script>
+</body>
+</html>

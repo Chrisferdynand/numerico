@@ -1,0 +1,97 @@
+.description{
+    padding: 20px;
+    background: #eaeab1;
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+}
+.description-2{
+        margin-top: 90px;
+        margin-bottom: 20px;
+        background-color: bisque;
+        height: 180px;
+        text-align: center;
+        font-family: 'Inconsolata', monospace;
+        font-size: 25px;
+    }
+.description h2{
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+}
+.description .puntos{
+    font-size: 30px;
+}
+.description p{
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 25px;
+}
+.description span{
+    color: red;
+    font-weight: 1200;
+}
+
+body.register{
+    background: #204862;
+}
+.description p.formulario{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Pontano Sans', sans-serif;
+}
+.register .form-register{
+    width: 98%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-family: 'Pontano Sans', sans-serif
+}
+.form__titulo{
+    background: deepskyblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 5px solid crimson;
+}
+.contenedor-inputs{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.input-48{
+    width: 40%;
+}
+.input-100{
+    width: 100%;
+}
+.btn-enviar{
+    border-radius: 25%;
+    margin: auto;
+    margin-left: 35%;
+
+    font-size: 20px;
+}
+.btn-enviar:active{
+    transform: scale(1.05);
+}
+.form__link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+}

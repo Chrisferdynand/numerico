@@ -1,0 +1,66 @@
+input[type="file"]{
+    margin: 0 20px 15px;
+    padding: 10px 1%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius;3px;
+    border-radius: 3px;
+    width: 90%;
+    background-color: #12b8f5;
+}
+.form-1-2{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin: auto;
+    width: 80%;
+}
+.barra{
+    background-color: #c6eac6;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,.2);
+    height: 25px;
+    width: 90%;
+    margin: auto;
+}
+.cancel{
+    background: #ed1f3c !important;
+    cursor: pointer;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    
+}
+.barra_azul{
+    background-color: #247CC0;
+    border-radius: 10px;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 0%;
+}
+.barra_verde{
+    background-color: #2EA265 !important;
+}
+.barra_roja{
+    background-color: #DE3152 !important;
+}
+
+#barra_estado span{
+    color: #fff;
+    font-weight: bold;
+    line-height: 25px;
+}
+.btn{
+    cursor: pointer;
+    margin: auto;
+    color: white;
+    margin-left: 35%;
+    background-color: #08570b;
+    font-size: 20px;
+}
+.acciones{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
