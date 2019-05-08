@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notas Fis-243</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    h4{
+        color: orangered;
+        text-transform: uppercase;
+    }
+    .dots{
+        color: orangered;
+        font-size: 2.2em;
+    }
+    #location span{
+        font-size: 2rem;
+        color: rgb(61, 255, 61);
+    }
+    #location h3,p{
+        padding: 20px;
+        color: white;
+    }
+    #location p{
+        font-size: 1.5em;
+    }
+    @media only screen and (max-width:600px){
+        #location span{
+            font-size: 1.5em;
+        }
+        #location h3{
+            font-size: 2.2em;
+        }
+        #location p{
+            font-size: 1em;
+        }
+        .personas a{
+            display: none;
+        }
+        video{
+            height: 750px;
+        }
+    }
+    section p{
+        color: black;
+    }
+    #description{
+       text-align: justify;
+    }
+    .icono{
+       color: crimson;
+    }
+    .personas a{
+        background-color: crimson;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .invitados{
+        color: orangered;
+        text-transform: uppercase;
+
+    }
+   
+    .section{
+      top: 0;
+      bottom: 0;
+      position: relative;
+    }
+   
+    
+    /*Cuenta regresiva*/
+    div.cuenta-regresiva ul li{
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.6rem;
+        text-align: center;
+        color: #0d00c0;
+    }
+    .numero{
+        color: crimson;
+        font-size: 1.8em;
+        
+    }
+    /*Organizadores y auspiciadores*/
+    .info-curso i{
+        color: crimson;
+        font-size: 1.3em;
+    }
+    .info-curso h5{
+        text-transform: uppercase;
+        color: orangered;
+        font-weight: bold;
+    }
+    span a{
+        background-color: orangered;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+    .pago{
+        font-size: 20px;
+        color: white;
+    }
+        .bad{
+            color: red;
+            font-size: 20px;
+        }
+        .half{
+            color: green;
+            font-size: 20px;
+        }
+        .good{
+            color: greenyellow;
+            font-size: 20px;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128773448-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128773448-1');
+    </script>
+
+</head>
+<body>
+    <!--Menu-->
+     <nav class="grey darken-4">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Fis-243</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><a href="./index.html" > Inicio</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Material<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="nav-link" href="http://iau-noc.org.bo/ask/"> StackOverflow</a></li>
+            <li><a href="./proyecto.html"> Proyecto</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+       <li><a href="./index.html" > Inicio</a></li>
+         <li><a class="dropdown-trigger" href="#!" data-target="#dropdown1">Material<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="nav-link" href="http://iau-noc.org.bo/ask/"> StackOverflow</a></li>
+        <li><a href="./proyecto.html">Proyecto</a></li>
+      </ul>
+      <ul id="dropdown1" class="dropdown-content">
+          <li><a href="./apuntes.html">Apuntes</a></li>
+          <li class="divider"></li>
+          <li><a href="videos.html">Videos</a></li>
+        </ul>
+    <!--Particles-->
+    
+    <!--Description-->
+    <section class="section container">
+      <h4 class="center">Notas 1er Proyecto</h4>
+      <p class="center-align"><i class="dots fas fa-ellipsis-h"></i></p>
+   
+     <table class="centered striped responsive-table">
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Nombre de archivo por argv</th>
+              <th>Errores en Stderr</th>
+              <th>Lista de Números</th>
+              <th>Matríz</th>
+              <th>Nota</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Ana L. Gomez Palo</td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td><i class="half fas fa-star-half"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td>5%</td>
+          </tr>
+          <tr>
+            <td>Diego H. Vega García</td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>Erick Bilbao</td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="half fas fa-star-half"></i></td>
+            <td><i class="half fas fa-star-half"></i> 1/4</td>
+            <td>43%</td>
+          </tr>
+           <tr>
+            <td>Fabricio Echelar</td>
+             <td><i class="bad fas fa-times-circle"></i></td>
+             <td><i class="bad fas fa-times-circle"></i></td>
+             <td><i class="bad fas fa-times-circle"></i></td>
+             <td><i class="bad fas fa-times-circle"></i></td>
+            <td>0%</td>
+          </tr>
+           <tr>
+            <td>Mauricio Calderón</td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Franz Vera</td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Gustavo Vergara</td>
+             <td><i class="bad fas fa-times-circle"></i></td>
+            <td><i class="good fas fa-check"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td><i class="bad fas fa-times-circle"></i></td>
+            <td>10%</td>
+          </tr>
+        </tbody>
+      </table> 
+    </section>
+  <!--Footer-->
+  <footer class="grey darken-4 page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Fis-243</h5>
+              <p class="grey-text text-lighten-4">Las notas presentadas aquí están sujetas de acuerdo al modo de calificación que se plantearón a inicios de semestre. De tener algún reclamo favor de pasar a oficinas del docente de la materia Dr. Hugo M. Rivera B.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Dirección</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!"><i class="fas fa-map-marked-alt"></i> Carrera de Física, Campus universitario, calle 27, Cota cota- La Paz</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!"><i class="fas fa-phone"></i> (+591-2) 2612801</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!"><i class="far fa-envelope"></i> </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2019, All rights reserved - |Cálculo Numérico y Programación|. 
+          <a class="grey-text text-lighten-4 right" href="http://www.fiumsa.edu.bo"><i class="fas fa-university"></i> Carrera de Física</a> <br>
+          </div>
+        </div>
+      </footer>
+    <!-- Compiled and minified JavaScript -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./particles.js"></script>
+    <script src="./app.js"></script>
+    <script src="./jquery.countdown.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script>
+    $(Document).ready(function(){
+         $(".dropdown-trigger").dropdown();
+    });
+    </script>
+</body>
+</html>
