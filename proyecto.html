@@ -315,13 +315,18 @@
     
     <!--Description-->
     <section class="section grey lighten-3 container">
-      <h4 class="center">2° Proyecto</h4>
+      <h4 class="center">3° Proyecto (FINAL)</h4>
       <p class="center-align"><i class="dots fas fa-ellipsis-h"></i></p>
-      <p id="description">Escribir un programa que haga una interpolación de splines naturales sobre puntos en el plano xy. El programa debe ser capaz de leer los puntos de un archivo, cuyo nombre debe recibir como argumento, que contiene dos columnas de números; la primera corresponde a las componentes en el eje x de los puntos, mientras la segunda corresponde a las componentes en y. El programa debe producir mensajes de error en caso de que las columnas no sean dos, que los puntos se encuentren a lo largo de una línea vertical o que encuentre algún error a la hora de tranformar las cadenas en números. <br><br>
-Usando la interpolación que acaban de encontrar, el programa debe generar 5000 puntos en el intervalo donde hizo la interpolación, usando un espaciamiento uniforme entre puntos.
-Note que este programa es casi idéntico en funcionalidad al programa interpol.c que estudiamos en clase, con la salvedad que no se le pide que haga la interpolación por división de diferencias de Newton, sino que use las splines naturales. <br><br>
-El plazo para la entrega es el miércoles 22 de mayo a las 12:00 p.m. <br><br>
-Suerte!.
+      <p id="description">El último proyecto consiste en escribir un programa que resuelva la ecuación
+diferencial:<br><br>
+
+xy'' + (2x - 3)y' + 4y/x = 0
+<br><br>
+usando el método de Runge Kutta de 4to orden. El programa debe recibir el tamaño
+del paso y las condiciones iniciales como argumento, para luego encontrar la
+solución aproximada a partir de x = 0 e imprimirla en su salida estándar.<br><br>
+El plazo para la entrega de su solución es el domingo 9 de junio a las 13:00.<br><br>
+¡Suerte!.
    </p>
 <div class="center-align"> 
 <a class="waves-effect waves-light btn" href="tareas/2do-proyecto.pdf"><i class="material-icons left">picture_as_pdf</i>Ver PDF</a>
@@ -393,7 +398,7 @@ Suerte!.
       $('.tabs').tabs();
       
       /**Cuenta regresiva**/
-      $('.cuenta-regresiva').countdown('2019/05/22 12:00:00', function(event){
+      $('.cuenta-regresiva').countdown('2019/06/9 13:00:00', function(event){
           $('#dias').html(event.strftime('%D'));
           $('#horas').html(event.strftime('%H'));
           $('#minutos').html(event.strftime('%M'));
