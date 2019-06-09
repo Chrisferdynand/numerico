@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sorteo</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    h4{
+        color: orangered;
+        text-transform: uppercase;
+    }
+    .dots{
+        color: orangered;
+        font-size: 2.2em;
+    }
+    #location span{
+        font-size: 2rem;
+        color: rgb(61, 255, 61);
+    }
+    #location h3,p{
+        padding: 20px;
+        color: white;
+    }
+    #location p{
+        font-size: 1.5em;
+    }
+    @media only screen and (max-width:600px){
+        #location span{
+            font-size: 1.5em;
+        }
+        #location h3{
+            font-size: 2.2em;
+        }
+        #location p{
+            font-size: 1em;
+        }
+        .personas a{
+            display: none;
+        }
+        video{
+            height: 750px;
+        }
+    }
+    section p{
+        color: black;
+    }
+    #description{
+       text-align: justify;
+    }
+    .icono{
+       color: crimson;
+    }
+    .personas a{
+        background-color: crimson;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .invitados{
+        color: orangered;
+        text-transform: uppercase;
+
+    }
+   
+    .section{
+      top: 0;
+      bottom: 0;
+      position: relative;
+    }
+   
+    
+    /*Cuenta regresiva*/
+    div.cuenta-regresiva ul li{
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.6rem;
+        text-align: center;
+        color: #0d00c0;
+    }
+    .numero{
+        color: crimson;
+        font-size: 1.8em;
+        
+    }
+    /*Organizadores y auspiciadores*/
+    .info-curso i{
+        color: crimson;
+        font-size: 1.3em;
+    }
+    .info-curso h5{
+        text-transform: uppercase;
+        color: orangered;
+        font-weight: bold;
+    }
+    span a{
+        background-color: orangered;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+    .pago{
+        font-size: 20px;
+        color: white;
+    }
+        .bad{
+            color: red;
+            font-size: 20px;
+        }
+        .half{
+            color: green;
+            font-size: 20px;
+        }
+        .good{
+            color: greenyellow;
+            font-size: 20px;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128773448-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128773448-1');
+    </script>
+
+</head>
+<body>
+    <!--Menu-->
+     <nav class="grey darken-4">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Fis-243</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><a href="./index.html" > Inicio</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Material<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="nav-link" href="http://iau-noc.org.bo/ask/"> StackOverflow</a></li>
+            <li><a href="./proyecto.html"> Proyecto</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+       <li><a href="./index.html" > Inicio</a></li>
+         <li><a class="dropdown-trigger" href="#!" data-target="#dropdown1">Material<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="nav-link" href="http://iau-noc.org.bo/ask/"> StackOverflow</a></li>
+        <li><a href="./proyecto.html">Proyecto</a></li>
+      </ul>
+      <ul id="dropdown1" class="dropdown-content">
+          <li><a href="./apuntes.html">Apuntes</a></li>
+          <li class="divider"></li>
+          <li><a href="videos.html">Videos</a></li>
+        </ul>
+    <!--Particles-->
+    
+    <!--Description-->
+    <section class="section container">
+      <h4 class="center">Sorteo de Temas</h4>
+      <p class="center-align"><i class="dots fas fa-ellipsis-h"></i></p>
+   
+     <table class="centered striped responsive-table">
+        <thead>
+          <tr>
+              <th>N°</th>
+              <th>CI</th>
+              <th>Nombre</th>
+              <th>Tema</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>8319958</td>
+            <td>Alvarado Cayami</td>
+            <td>9. Interpolación</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>7357187</td>
+            <td>Ayala Lapca</td>
+            <td>6. Entrada y salida en C</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>9129329</td>
+            <td>Bilbao Gutierrez</td>
+            <td>9. Interpolación</td>
+          </tr>
+           <tr>
+            <td>4</td>
+             <td>8304679</td>
+             <td>Cabrea Menduiña</td>
+             <td>9. Interpolación</td>
+          </tr>
+           <tr>
+            <td>5</td>
+            <td>5953547</td>
+            <td>Calderon de la Barca</td>
+            <td>Entrada y Salida en C</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>6723648</td>
+            <td>Carvajal Perez</td>
+            <td>8. Sistemas de ecuaciones lineales</td>
+          </tr>
+          <tr>
+            <td>7</td>
+             <td>4917357</td>
+            <td>Echalar Lacunza</td>
+            <td>5. Estructuras en C</td>
+          </tr>
+          <tr>
+            <td>8</td>
+             <td>5999506</td>
+            <td>Farel Hervas</td>
+            <td>11. Diferenciación e integración numérica</td>
+          </tr>
+          <tr>
+            <td>9</td>
+             <td>12834437</td>
+            <td>Gomez Polo</td>
+            <td>2. Control de Flujo en C</td>
+          </tr>
+          <tr>
+            <td>10</td>
+             <td>7083472</td>
+            <td>Lino Blacutt</td>
+            <td>7. R</td>
+          </tr>
+          <tr>
+            <td>11</td>
+             <td>9128650</td>
+            <td>Machicado Huanca</td>
+            <td>12. Ecuaciones diferenciales ordinarias</td>
+          </tr>
+          <tr>
+            <td>12</td>
+             <td>9235065</td>
+            <td>Mamani Herrera</td>
+            <td>8. Sistemas de Ecuaciones Lineales</td>
+          </tr>
+          <tr>
+            <td>13</td>
+             <td>7317918</td>
+            <td>Muñoz Lara</td>
+            <td>5. Estructuras en C</td>
+          </tr>
+          <tr>
+            <td>14</td>
+             <td>4840830</td>
+            <td>Paz Cortez</td>
+            <td>3. Funciones y variables globales en C</td>
+          </tr>
+          <tr>
+            <td>15</td>
+             <td>10665255</td>
+            <td>Polo Alcoba</td>
+            <td>4. Punteros y arreglos en C</td>
+          </tr>
+          <tr>
+            <td>16</td>
+             <td>6988261</td>
+            <td>Quispe Salas</td>
+            <td>6. Entrada y salida en C</td>
+          </tr>
+          <tr>
+            <td>17</td>
+             <td>6966353</td>
+            <td>Ramirez Trino</td>
+            <td>6. Entrada y salida en C</td>
+          </tr>
+          <tr>
+            <td>18</td>
+             <td>8464655</td>
+            <td>Rodriguez Reguerin</td>
+            <td>10. Mínimos cuadrados</td>
+          </tr>
+          <tr>
+
+            <td>19</td>
+
+             <td>9212205</td>
+
+            <td>Sanchez Perez</td>
+
+            <td>12. Punteros y arreglos en C</td>
+
+          </tr>
+
+          <tr>
+
+            <td>20</td>
+
+             <td>9971850</td>
+
+            <td>VTumiri Quispe</td>
+
+            <td>8.Control de flujo en C </td>
+
+          </tr>
+
+          <tr>
+
+            <td>21</td>
+
+             <td>12544413</td>
+
+            <td>Vega Garcia</td>
+
+            <td>12. Tipos de datos y expresiones en C</td>
+
+          </tr>
+
+         <tr>
+
+            <td>22</td>
+
+             <td>8323174</td>
+
+            <td>Vera Rollano</td>
+
+            <td>12. Diferenciacion e integracion numerica</td>
+
+          </tr>
+
+          <tr>
+
+            <td>23</td>
+
+             <td>8439413</td>
+
+            <td>Vergara Paco</td>
+
+            <td>8.Raices reales de una funcion</td>
+
+          </tr>
+        </tbody>
+      </table> 
+    </section>
+  <!--Footer-->
+  <footer class="grey darken-4 page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Fis-243</h5>
+              <p class="grey-text text-lighten-4">Los sorteos se hicieron de forma aletoria, y los temas designados son inamovibles. De igual forma las preguntas por parte del tribunal es sobre toda la materia por lo que se recomienda repasar todos los temas avanzados en la materia durante el semestre.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Dirección</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!"><i class="fas fa-map-marked-alt"></i> Carrera de Física, Campus universitario, calle 27, Cota cota- La Paz</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!"><i class="fas fa-phone"></i> (+591-2) 2612801</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!"><i class="far fa-envelope"></i> </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2019, All rights reserved - |Cálculo Numérico y Programación|. 
+          <a class="grey-text text-lighten-4 right" href="http://www.fiumsa.edu.bo"><i class="fas fa-university"></i> Carrera de Física</a> <br>
+          </div>
+        </div>
+      </footer>
+    <!-- Compiled and minified JavaScript -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./particles.js"></script>
+    <script src="./app.js"></script>
+    <script src="./jquery.countdown.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script>
+    $(Document).ready(function(){
+         $(".dropdown-trigger").dropdown();
+    });
+    </script>
+</body>
+</html>
